@@ -1,0 +1,240 @@
+python-openstacksdk (0.27.0-0ubuntu1~cloud0) bionic-stein; urgency=medium
+
+  * d/gbp.conf: Create stable/stein branch.
+  * New upstream point release for OpenStack Stein (LP: #1866361).
+  * d/control: Align (Build-)Depends with upstream.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Wed, 11 Mar 2020 09:47:04 -0400
+
+python-openstacksdk (0.26.0-0ubuntu1~cloud0) bionic-stein; urgency=medium
+
+  * New update for the Ubuntu Cloud Archive.
+
+ -- Openstack Ubuntu Testing Bot <openstack-testing-bot@ubuntu.com>  Wed, 13 Mar 2019 17:29:36 +0000
+
+python-openstacksdk (0.26.0-0ubuntu1) disco; urgency=medium
+
+  * New upstream release for OpenStack Stein.
+
+ -- James Page <james.page@ubuntu.com>  Wed, 13 Mar 2019 15:02:22 +0000
+
+python-openstacksdk (0.23.0-0ubuntu1) disco; urgency=medium
+
+  * New upstream release for OpenStack Stein.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/p/skip-tests-py27.patch: Added to skip failing py27 tests.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Wed, 30 Jan 2019 12:42:34 -0500
+
+python-openstacksdk (0.17.2-0ubuntu1) cosmic; urgency=medium
+
+  * New upstream point release for OpenStack Rocky.
+
+ -- James Page <james.page@ubuntu.com>  Thu, 16 Aug 2018 08:24:46 +0100
+
+python-openstacksdk (0.17.1-0ubuntu1) cosmic; urgency=medium
+
+  * Merge from Debian unstable.  Remaining changes:
+    - d/watch: Get tarball from pypi.debian.net.
+    - d/p/install-missing-files.patch: Dropped. Not needed with pristine-tar.
+    - d/gbp.conf: Retained for pristine-tar.
+  * d/control: Update Standards-Version to 4.1.4.
+  * New upstream release for OpenStack Rocky.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/rules: Ensure OS_LOG_CAPTURE=true is set when running tests as it
+    prevents timeouts.
+  * d/p/skip-tests.patch: Skip failing Py3.7 tests.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Tue, 31 Jul 2018 09:47:42 -0400
+
+python-openstacksdk (0.11.3-3) unstable; urgency=medium
+
+  * Fixed Python 3 shebang.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 18 Mar 2018 18:46:30 +0000
+
+python-openstacksdk (0.11.3-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 25 Feb 2018 22:56:32 +0000
+
+python-openstacksdk (0.11.3-1) experimental; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Removed intersphinx patch.
+  * Switch doc to use Python 3: Py2 doesn't have itertools.filterfalse() that
+    the doc is using.
+  * Add install-missing-files.patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 13 Feb 2018 07:26:41 +0000
+
+python-openstacksdk (0.11.3+repack-0ubuntu1) bionic; urgency=medium
+
+  * d/watch: Use pypi.debian.net, as github tag tarballs are not release
+    artefacts.
+  * Use release tarball (+repack) from  pypi.debian.net.
+
+ -- James Page <james.page@ubuntu.com>  Thu, 15 Feb 2018 09:51:56 +0000
+
+python-openstacksdk (0.11.3-0ubuntu1) bionic; urgency=medium
+
+  * New upstream release.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/p/remove-intersphinx.patch: Dropped. No longer needed.
+  * d/rules: Run tests with stestr.
+  * d/p/py2-enable-docs.patch: Enable docs to be built with py2.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Wed, 14 Feb 2018 13:39:57 -0500
+
+python-openstacksdk (0.9.19-0ubuntu1) bionic; urgency=medium
+
+  * New upstream release.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/p/remove-openstackdocstheme.patch, d/p/remove-enforcer.patch: Dropped.
+    No longer needed.
+  * d/*: wrap-and-sort -bast.
+  * d/control: Update Standards-Version to 4.1.2.
+  * d/control: Bump debhelper compat to 10.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Tue, 12 Dec 2017 08:38:33 -0500
+
+python-openstacksdk (0.9.17-2) unstable; urgency=medium
+
+  * Set minimum version of openstackdocstheme (Closes: #880178).
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 30 Oct 2017 22:44:59 +0000
+
+python-openstacksdk (0.9.17-1) experimental; urgency=medium
+
+  [ Ondřej Nový ]
+  * Standards-Version is 3.9.8 now (no change)
+  * d/rules: Removed UPSTREAM_GIT with default value
+  * d/copyright: Changed source URL to new one
+
+  [ Daniel Baumann ]
+  * Updating vcs fields.
+  * Updating copyright format url.
+  * Running wrap-and-sort -bast.
+  * Updating maintainer field.
+  * Updating standards version to 4.0.0.
+  * Removing gbp.conf, not used anymore or should be specified in the
+    developers dotfiles.
+  * Updating standards version to 4.0.1.
+  * Updating standards version to 4.1.0.
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Using pkgos-dh_auto_{test,install}.
+  * Rebase remove-intersphinx.patch.
+  * Remove remove-openstackdocstheme.patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 03 Oct 2017 15:10:42 +0200
+
+python-openstacksdk (0.9.17-0ubuntu1) artful; urgency=medium
+
+  * New upstream release.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/p/*: Rebased.
+  * d/p/remove-enforcer.patch: Drop enforcer extension as it's not needed in
+    distro and is hitting an import error for bs4.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Mon, 31 Jul 2017 15:38:14 -0400
+
+python-openstacksdk (0.9.13-0ubuntu1) zesty; urgency=medium
+
+  * New upstream release.
+  * debian/control: Bump version dependencies. 
+
+ -- Chuck Short <zulcss@ubuntu.com>  Mon, 30 Jan 2017 13:42:07 -0500
+
+python-openstacksdk (0.9.10-0ubuntu1) zesty; urgency=medium
+
+  * New upstream version.
+  * debian/control: Bump version dependencies. 
+
+ -- Chuck Short <zulcss@ubuntu.com>  Tue, 22 Nov 2016 09:49:46 -0500
+
+python-openstacksdk (0.9.7-1ubuntu1) zesty; urgency=medium
+
+  * d/gbp.conf: Update gbp configuration file.
+  * d/control: Update Vcs-* links and maintainers.
+  * New upstream version. 
+
+ -- Chuck Short <zulcss@ubuntu.com>  Thu, 27 Oct 2016 11:43:18 -0400
+
+python-openstacksdk (0.9.5-0ubuntu1) yakkety; urgency=medium
+
+  [ Thomas Goirand ]
+  * Using pkgos-dh_auto_{test,install} from openstack-pkg-tools >= 52~.
+
+  [ Corey Bryant ]
+  * New upstream release.
+  * d/control: Align (Build-)Depends with upstream.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Fri, 02 Sep 2016 12:10:18 -0400
+
+python-openstacksdk (0.8.1-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 04 Apr 2016 11:31:25 +0000
+
+python-openstacksdk (0.8.1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Bumped required python-iso8601 version in build-depends-indep.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 22 Mar 2016 17:14:42 +0100
+
+python-openstacksdk (0.8.0-1) experimental; urgency=medium
+
+  [ Ivan Udovichenko ]
+  * d/conrol: Update dependencies.
+  * d/patches: Update patch remove-intersphinx.patch
+
+  [ Corey Bryant ]
+  * d/control: Update min version of python(3)-keystoneauth1 to ensure this
+    bug is fixed: https://bugs.launchpad.net/keystoneauth/+bug/1502232
+  * d/control: Add git to build-depends for sphinx-build
+  * d/control: Add python-oslosphinx to build-depends.
+
+  [ Ondřej Nový ]
+  * Fixed VCS URLs (https).
+
+  [ Corey Bryant ]
+  * New upstream release.
+  * d/p/remove-openstackdocstheme.patch: Drop openstackdocstheme from sphinx
+    documentation.
+  * d/control: Drop python-openstackdocstheme from BDs.
+
+  [ Thomas Goirand ]
+  * Standards-Version: 3.9.7 (no change).
+  * Fixed debian/copyright ordering.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 03 Mar 2016 04:38:29 +0000
+
+python-openstacksdk (0.7.1-2) experimental; urgency=medium
+
+  [ Thomas Goirand ]
+  * Removed intersphinx module.
+
+  [ Corey Bryant ]
+  * d/rules: Run py3 tests.
+  * d/watch: Updated to get tarball from github.
+  * d/control: Add python(3)-keystoneauth1 to BDs.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Wed, 16 Dec 2015 09:19:48 -0500
+
+python-openstacksdk (0.7.1-1) experimental; urgency=medium
+
+  * Initial release. (Closes: #778645)
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 17 Feb 2015 21:48:45 +0100
