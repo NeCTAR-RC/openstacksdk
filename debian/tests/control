@@ -1,0 +1,3 @@
+Tests: python-import
+Depends: @, @builddeps@
+Restrictions: allow-stderr

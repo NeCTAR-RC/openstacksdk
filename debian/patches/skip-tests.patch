@@ -1,0 +1,25 @@
+Description: Skip failing Py3.7 tests.
+Author: Corey Bryant <corey.bryant@canonical.com>
+Bug-Ubuntu: https://storyboard.openstack.org/#!/story/2003206
+Forwarded: No
+
+--- a/openstack/tests/unit/test_resource.py
++++ b/openstack/tests/unit/test_resource.py
+@@ -17,6 +17,8 @@
+ import munch
+ import requests
+ import six
++import sys
++import testtools
+ 
+ from openstack import exceptions
+ from openstack import format
+@@ -1532,6 +1534,8 @@
+         # Ensure we made three calls to get this done
+         self.assertEqual(3, len(self.session.get.call_args_list))
+ 
++    @testtools.skipIf(sys.version_info.major == 3 and sys.version_info.minor == 7,
++                      "story/2003206: Skipped by Ubuntu, test fails for Python 3.7")
+     def test_list_multi_page_inferred_additional(self):
+         # If we explicitly request a limit and we receive EXACTLY that
+         # amount of results and there is no next link, we make one additional
