@@ -3,4 +3,6 @@ include ChangeLog
 exclude .gitignore
 exclude .gitreview
 
+graft openstack
+
 global-exclude *.pyc
